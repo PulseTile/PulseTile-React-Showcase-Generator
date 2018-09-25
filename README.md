@@ -1,36 +1,76 @@
-# generator-showcase [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> Generator for Showcase-version
+# General infornation
 
-## Installation
+This generator is used for automatic creation build for Showcase-version. 
 
-First, install [Yeoman](http://yeoman.io) and generator-showcase using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+It based on **Yeoman** technology. This tool gives possibility to create new project from modules, which are located in the separate GitHub repositories. More information about Yeoman you can found here: http://yeoman.io/
 
-```bash
-npm install -g yo
-npm install -g generator-showcase
+If you want to install HelmPHR-version automatically, you should read **"Installing"** below.
+
+# Content
+
+Current version of **Helm-PHR generator** includes following sub-generators:
+1) **Core** sub-generator (_yo showcase:core_);
+2) Plugin **HelmPHR-theme** sub-generator (_yo showcase:plugin-showcase-theme_);
+
+
+# Core
+
+This sub-generator does the following automatically:
+1) Clone PulseTile-Core version from GitHub;
+2) Install all required Node-modules;
+3) Create the directory for non-core plugins.
+ 
+If any errors occur during generator work you should remove project directory and repeat generator command.
+
+
+# Plugin for Showcase-theme
+
+This sub-generator does the following automatically:
+1) Clone silver Showcase-theme plugin from GitHub to **plugins/** directory in the project;
+2) Relocate **styles/** directory to **src/**;
+3) Import new styles in **src/config/style.js**.
+ 
+If any errors occur during generator work you should remove project directory and repeat generator command.
+
+# Environment
+
+Before installing the Generator, you will need the following:
+- Node.js 6 or higher
+- npm 3 or higher (which comes bundled with Node)
+- Git
+
+You can check current version by:
+```
+    $ node --version
+    $ npm --version
+    $ git --version
 ```
 
-Then generate your new project:
+# Installing
 
-```bash
-yo showcase
+Install Yeoman tool at you local machine if it is absent there:
+```
+    $ npm install -g yo
+    $ npm install -g generator-showcase
 ```
 
-## Getting To Know Yeoman
+Go to the directory, where you will create your build, for example:
+```
+    $ cd /var/www/html/myDirectoryName/
+```
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+Use Yeoman-generator to create your build automatically:
+```
+    $ yo showcase:core
+    $ yo showcase:plugin-showcase-theme
+```
 
-## License
+When you build will be created, go to project directory and create the build:
+```
+    $ cd PulseTile-React-Core
+    $ npm run build
+```
 
-Apache-2.0 © [bogdan_scher]()
-
-
-[npm-image]: https://badge.fury.io/js/generator-showcase.svg
-[npm-url]: https://npmjs.org/package/generator-showcase
-[travis-image]: https://travis-ci.org/BogdanScherban/generator-showcase.svg?branch=master
-[travis-url]: https://travis-ci.org/BogdanScherban/generator-showcase
-[daviddm-image]: https://david-dm.org/BogdanScherban/generator-showcase.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/BogdanScherban/generator-showcase
+Your build will be located in two places:
+- as zip-archive in **projectDirectory/build/**
+- as set of files in **projectDirectory/dist/**
