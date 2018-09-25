@@ -1,6 +1,6 @@
 {
   "name": "generator-showcase",
-  "version": "0.0.0",
+  "version": "1.0.2",
   "description": "Generator for Showcase-version",
   "homepage": "",
   "author": {
@@ -9,7 +9,8 @@
     "url": ""
   },
   "files": [
-    "generators"
+    "generators",
+    "common"
   ],
   "main": "generators/index.js",
   "keywords": [
@@ -79,6 +80,9 @@
       "prettier"
     ]
   },
-  "repository": "BogdanScherban/generator-showcase",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PulseTile/PusleTile-React-Showcase-Generator"
+  },
   "license": "Apache-2.0"
 }
