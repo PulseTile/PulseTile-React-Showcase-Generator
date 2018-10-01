@@ -39,7 +39,9 @@ const mainThemeConfigs = {
     'referrals': true,
     'proms': true,
     'vitals': true,
-
+    'vaccinations': true,
+    'topThreeThings': true,
+    'feeds': true,
   },
   patientsSummaryTitles: {
     'diagnoses': 'Problems / Diagnosis',
