@@ -1,6 +1,6 @@
 module.exports = {
-    'ClinicalNotes' : {
-        clientsUrl : {
+    ClinicalNotes: {
+        clientsUrl: {
             name: 'CLINICAL_NOTES',
             url: 'clinicalNotes'
         },
@@ -13,7 +13,7 @@ module.exports = {
             pluginDirectory: '../plugins/ClinicalNotes/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/ClinicalNotes/ducks/fetch-patient-clinical-notes.duck',
@@ -21,17 +21,17 @@ module.exports = {
             requestDetails: 'fetchPatientClinicalNotesDetailRequest',
             request: 'fetchPatientClinicalNotesRequest',
             onMount: 'fetchPatientClinicalNotesOnMount',
-            onMountDetails: 'fetchPatientClinicalNotesDetailOnMount',
+            onMountDetails: 'fetchPatientClinicalNotesDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'ClinicalStatements' : {
-        clientsUrl : {
+    ClinicalStatements: {
+        clientsUrl: {
             name: 'CLINICAL_STATEMENTS',
             url: 'clinicalStatements'
         },
@@ -44,7 +44,7 @@ module.exports = {
             pluginDirectory: '../plugins/ClinicalStatements/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/ClinicalStatements/ducks/fetch-patient-clinical-notes.duck',
@@ -52,17 +52,17 @@ module.exports = {
             requestDetails: 'fetchPatientTopThreeThingsDetailRequest',
             request: 'fetchPatientClinicalStatementsRequest',
             onMount: 'fetchPatientClinicalStatementsOnMount',
-            onMountDetails: 'fetchPatientClinicalStatementsDetailOnMount',
+            onMountDetails: 'fetchPatientClinicalStatementsDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'Documents' : {
-        clientsUrl : {
+    Documents: {
+        clientsUrl: {
             name: 'DOCUMENTS',
             url: 'documents'
         },
@@ -75,7 +75,7 @@ module.exports = {
             pluginDirectory: '../plugins/Documents/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/Documents/ducks/fetch-patient-documents.duck',
@@ -83,17 +83,17 @@ module.exports = {
             requestDetails: 'fetchPatientDocumentsDetailRequest',
             request: 'fetchPatientDocumentsRequest',
             onMount: 'fetchPatientDocumentsOnMount',
-            onMountDetails: 'fetchPatientDocumentsDetailOnMount',
+            onMountDetails: 'fetchPatientDocumentsDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'Drawings' : {
-        clientsUrl : {
+    Drawings: {
+        clientsUrl: {
             name: 'DRAWINGS',
             url: 'drawings'
         },
@@ -106,7 +106,7 @@ module.exports = {
             pluginDirectory: '../plugins/Drawings/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/Drawings/ducks/fetch-patient-drawings.duck',
@@ -114,17 +114,17 @@ module.exports = {
             requestDetails: 'fetchPatientDrawingsDetailRequest',
             request: 'fetchPatientDrawingsRequest',
             onMount: 'fetchPatientDrawingsOnMount',
-            onMountDetails: 'fetchPatientDrawingsDetailOnMount',
+            onMountDetails: 'fetchPatientDrawingsDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'Feeds' : {
-        clientsUrl : { name: 'FEEDS', url: 'feeds' },
+    Feeds: {
+        clientsUrl: { name: 'FEEDS', url: 'feeds' },
         plugins: {
             getTitle: 'feedsTitle',
             title: 'Feeds',
@@ -132,9 +132,9 @@ module.exports = {
             url: 'feeds',
             import: 'feeds',
             pluginDirectory: '../plugins/Feeds/index',
-            imageImport: null,
-            imageSource: null,
-            forTest: null,
+            imageImport: 'imgRSSFeeds',
+            imageSource: '../plugins/Feeds/ImageSource',
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/Feeds/ducks/fetch-feeds.duck',
@@ -142,17 +142,17 @@ module.exports = {
             requestDetails: null,
             request: null,
             onMount: null,
-            onMountDetails: null,
+            onMountDetails: null
         },
         themeSelectors: {
             importUrl: '../plugins/Feeds/selectors',
             selector: 'feedsSelector',
             store: null,
-            url: 'feeds',
-        },
+            url: 'feeds'
+        }
     },
-    'Events' : {
-        clientsUrl : {
+    Events: {
+        clientsUrl: {
             name: 'EVENTS',
             url: 'events'
         },
@@ -165,7 +165,7 @@ module.exports = {
             pluginDirectory: '../plugins/Events/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/Events/ducks/fetch-patient-events.duck',
@@ -173,17 +173,17 @@ module.exports = {
             requestDetails: 'fetchPatientEventsDetailRequest',
             request: 'fetchPatientEventsRequest',
             onMount: 'fetchPatientEventsOnMount',
-            onMountDetails: 'fetchPatientEventsDetailOnMount',
+            onMountDetails: 'fetchPatientEventsDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'GenericMdt' : {
-        clientsUrl : {
+    GenericMdt: {
+        clientsUrl: {
             name: 'MDTS',
             url: 'mdts'
         },
@@ -196,7 +196,7 @@ module.exports = {
             pluginDirectory: '../plugins/GenericMdt/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/GenericMdt/ducks/fetch-patient-generic-mdt.duck',
@@ -204,17 +204,17 @@ module.exports = {
             requestDetails: 'fetchPatientMDTsDetailRequest',
             request: 'fetchPatientMDTsRequest',
             onMount: 'fetchPatientMDTsOnMount',
-            onMountDetails: 'fetchPatientMDTsDetailOnMount',
+            onMountDetails: 'fetchPatientMDTsDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'GenericPlugin' : {
-        clientsUrl : {
+    GenericPlugin: {
+        clientsUrl: {
             name: 'GENERIC_PLUGIN',
             url: 'genericPlugin'
         },
@@ -227,7 +227,7 @@ module.exports = {
             pluginDirectory: '../plugins/GenericPlugin/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/GenericPlugin/ducks/fetch-patient-generic-plugin.duck',
@@ -235,17 +235,17 @@ module.exports = {
             requestDetails: 'fetchPatientGenericPluginDetailRequest',
             request: 'fetchPatientGenericPluginRequest',
             onMount: 'fetchPatientGenericPluginOnMount',
-            onMountDetails: 'fetchPatientGenericPluginDetailOnMount',
+            onMountDetails: 'fetchPatientGenericPluginDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'Orders' : {
-        clientsUrl : {
+    Orders: {
+        clientsUrl: {
             name: 'ORDERS',
             url: 'orders'
         },
@@ -258,7 +258,7 @@ module.exports = {
             pluginDirectory: '../plugins/Orders/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/Orders/ducks/fetch-patient-orders.duck',
@@ -266,17 +266,17 @@ module.exports = {
             requestDetails: 'fetchPatientOrdersDetailRequest',
             request: 'fetchPatientOrdersRequest',
             onMount: 'fetchPatientOrdersOnMount',
-            onMountDetails: 'fetchPatientOrdersDetailOnMount',
+            onMountDetails: 'fetchPatientOrdersDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'PersonalNotes' : {
-        clientsUrl : {
+    PersonalNotes: {
+        clientsUrl: {
             name: 'PERSONAL_NOTES',
             url: 'personalNotes'
         },
@@ -289,7 +289,7 @@ module.exports = {
             pluginDirectory: '../plugins/PersonalNotes/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/PersonalNotes/ducks/fetch-patient-personal-notes.duck',
@@ -297,17 +297,17 @@ module.exports = {
             requestDetails: 'fetchPatientPersonalNotesDetailRequest',
             request: 'fetchPatientPersonalNotesRequest',
             onMount: 'fetchPatientPersonalNotesOnMount',
-            onMountDetails: 'fetchPatientPersonalNotesDetailOnMount',
+            onMountDetails: 'fetchPatientPersonalNotesDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'Procedures' : {
-        clientsUrl : {
+    Procedures: {
+        clientsUrl: {
             name: 'PROCEDURES',
             url: 'procedures'
         },
@@ -320,7 +320,7 @@ module.exports = {
             pluginDirectory: '../plugins/Procedures/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/Procedures/ducks/fetch-patient-procedures.duck',
@@ -328,30 +328,30 @@ module.exports = {
             requestDetails: 'fetchPatientProceduresDetailRequest',
             request: 'fetchPatientProceduresRequest',
             onMount: 'fetchPatientProceduresOnMount',
-            onMountDetails: 'fetchPatientProceduresDetailOnMount',
+            onMountDetails: 'fetchPatientProceduresDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'PROMs' : {
-        clientsUrl : {
+    PROMs: {
+        clientsUrl: {
             name: 'PROMS',
             url: 'proms'
         },
         plugins: {
-            getTitle: 'proceduresTitle',
-            title: 'Procedures',
+            getTitle: 'promsTitle',
+            title: 'PROMs',
             emptyMessage: 'No information available.',
             url: 'proms',
             import: 'proms',
             pluginDirectory: '../plugins/PROMs/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/PROMs/ducks/fetch-patient-proms.duck',
@@ -359,17 +359,17 @@ module.exports = {
             requestDetails: 'fetchPatientPromsDetailRequest',
             request: 'fetchPatientPromsRequest',
             onMount: 'fetchPatientPromsOnMount',
-            onMountDetails: 'fetchPatientPromsDetailOnMount',
+            onMountDetails: 'fetchPatientPromsDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'Referrals' : {
-        clientsUrl : {
+    Referrals: {
+        clientsUrl: {
             name: 'REFERRALS',
             url: 'referrals'
         },
@@ -382,7 +382,7 @@ module.exports = {
             pluginDirectory: '../plugins/Referrals/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/Referrals/ducks/fetch-patient-referrals.duck',
@@ -390,17 +390,17 @@ module.exports = {
             requestDetails: 'fetchPatientReferralsDetailRequest',
             request: 'fetchPatientReferralsRequest',
             onMount: 'fetchPatientReferralsOnMount',
-            onMountDetails: 'fetchPatientReferralsDetailOnMount',
+            onMountDetails: 'fetchPatientReferralsDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'Results' : {
-        clientsUrl : {
+    Results: {
+        clientsUrl: {
             name: 'RESULTS',
             url: 'results'
         },
@@ -413,7 +413,7 @@ module.exports = {
             pluginDirectory: '../plugins/Results/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: null,
@@ -421,30 +421,31 @@ module.exports = {
             requestDetails: 'fetchPatientTestResultsDetailRequest',
             request: 'fetchPatientTestResultsRequest',
             onMount: 'fetchPatientTestResultsOnMount',
-            onMountDetails: 'fetchPatientTestResultsDetailOnMount',
+            onMountDetails: 'fetchPatientTestResultsDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'TopThreeThings' : {
-        clientsUrl : {
+    TopThreeThings: {
+        clientsUrl: {
             name: 'TOP_THREE_THINGS',
             url: 'topThreeThings'
         },
         plugins: {
             getTitle: 'topThreeThingsTitle',
             title: 'Top Three Things',
-            emptyMessage: 'No information available. Please list the Top 3 Things that concern you',
+            emptyMessage:
+                'No information available. Please list the Top 3 Things that concern you',
             url: 'topThreeThings',
             import: 'topThreeThings',
             pluginDirectory: '../plugins/TopThreeThings/index',
             imageImport: 'topThreeThingsPrevImage',
             imageSource: '../plugins/TopThreeThings/ImageSource',
-            forTest: 'patientsTopThreeThings',
+            forTest: 'patientsTopThreeThings'
         },
         synopsisRequests: {
             duckUrl: '../plugins/TopThreeThings/ducks/fetch-patient-top-three-things.duck',
@@ -452,17 +453,17 @@ module.exports = {
             requestDetails: 'fetchPatientTopThreeThingsDetailRequest',
             request: 'fetchPatientTopThreeThingsRequest',
             onMount: 'fetchPatientTopThreeThingsOnMount',
-            onMountDetails: 'fetchPatientTopThreeThingsDetailOnMount',
+            onMountDetails: 'fetchPatientTopThreeThingsDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: 'patientTopThreeThingsSelector',
             store: 'patientsTopThreeThings',
-            url: 'topThreeThings',
-        },
+            url: 'topThreeThings'
+        }
     },
-    'TransfersOfCare' : {
-        clientsUrl : {
+    TransfersOfCare: {
+        clientsUrl: {
             name: 'TRANSFERS_OF_CARE',
             url: 'transfersOfCare'
         },
@@ -475,7 +476,7 @@ module.exports = {
             pluginDirectory: '../plugins/TransfersOfCare/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/TransfersOfCare/ducks/fetch-patient-transfers-of-care.duck',
@@ -483,17 +484,17 @@ module.exports = {
             requestDetails: 'fetchPatientTransfersOfCareDetailRequest',
             request: 'fetchPatientTransfersOfCareRequest',
             onMount: 'fetchPatientTransfersOfCareOnMount',
-            onMountDetails: 'fetchPatientTransfersOfCareDetailOnMount',
+            onMountDetails: 'fetchPatientTransfersOfCareDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
-    'Vaccinations' : {
-        clientsUrl : { name: 'VACCINATIONS', url: 'vaccinations' },
+    Vaccinations: {
+        clientsUrl: { name: 'VACCINATIONS', url: 'vaccinations' },
         plugins: {
             getTitle: 'vaccinationsTitle',
             title: 'Vaccinations',
@@ -503,7 +504,7 @@ module.exports = {
             pluginDirectory: '../plugins/Vaccinations/index',
             imageImport: 'vaccinationsPrevImage',
             imageSource: '../plugins/Vaccinations/ImageSource',
-            forTest: 'patientsVaccinations',
+            forTest: 'patientsVaccinations'
         },
         synopsisRequests: {
             duckUrl: '../plugins/Vaccinations/ducks/fetch-patient-vaccinations.duck',
@@ -511,17 +512,17 @@ module.exports = {
             requestDetails: 'fetchPatientVaccinationsDetailRequest',
             request: 'fetchPatientVaccinationsRequest',
             onMount: 'fetchPatientVaccinationsOnMount',
-            onMountDetails: 'fetchPatientVaccinationsDetailOnMount',
+            onMountDetails: 'fetchPatientVaccinationsDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: 'patientVaccinationsSelector',
             store: 'patientsVaccinations',
-            url: 'vaccinations',
-        },
+            url: 'vaccinations'
+        }
     },
-    'Vitals' : {
-        clientsUrl : {
+    Vitals: {
+        clientsUrl: {
             name: 'VITALS',
             url: 'vitals'
         },
@@ -534,7 +535,7 @@ module.exports = {
             pluginDirectory: '../plugins/Vitals/index',
             imageImport: null,
             imageSource: null,
-            forTest: null,
+            forTest: null
         },
         synopsisRequests: {
             duckUrl: '../plugins/Vitals/ducks/fetch-patient-vitals.duck',
@@ -542,13 +543,75 @@ module.exports = {
             requestDetails: 'fetchPatientVitalsDetailRequest',
             request: 'fetchPatientVitalsRequest',
             onMount: 'fetchPatientVitalsOnMount',
-            onMountDetails: 'fetchPatientVitalsDetailOnMount',
+            onMountDetails: 'fetchPatientVitalsDetailOnMount'
         },
         themeSelectors: {
             importUrl: null,
             selector: null,
             store: null,
-            url: null,
-        },
+            url: null
+        }
     },
+    DiaryEntry: {
+        clientsUrl: {
+            name: 'DIARY_ENTRY',
+            url: 'diaryEntry'
+        },
+        plugins: {
+            getTitle: 'diaryEntryTitle',
+            title: 'Diary Entry',
+            emptyMessage: 'No information available.',
+            url: 'diaryEntry',
+            import: 'diaryEntry',
+            pluginDirectory: '../plugins/DiaryEntry/index',
+            imageImport: null,
+            imageSource: null,
+            forTest: null
+        },
+        synopsisRequests: {
+            duckUrl: '../plugins/DiaryEntry/ducks/fetch-patient-diary-entry.duck',
+            requestSynopsis: null,
+            requestDetails: 'fetchPatientDiaryEntryDetailRequest',
+            request: 'fetchPatientDiaryEntryRequest',
+            onMount: 'fetchPatientDiaryEntryOnMount',
+            onMountDetails: 'fetchPatientDiaryEntryDetailOnMount'
+        },
+        themeSelectors: {
+            importUrl: null,
+            selector: null,
+            store: null,
+            url: null
+        }
+    },
+    Images: {
+        clientsUrl: {
+            name: 'IMAGES',
+            url: 'images'
+        },
+        plugins: {
+            getTitle: 'imagesTitle',
+            title: 'Images',
+            emptyMessage: 'No information available.',
+            url: 'images',
+            import: 'images',
+            pluginDirectory: '../plugins/Images/index',
+            imageImport: null,
+            imageSource: null,
+            forTest: null
+        },
+        synopsisRequests: {
+            duckUrl: '../plugins/Images/ducks/fetch-patient-images.duck',
+            requestSynopsis: null,
+            requestDetails: null,
+            request: 'fetchPatientImagesRequest',
+            onMount: 'fetchPatientImagesOnMount',
+            onMountDetails: null
+        },
+        themeSelectors: {
+            importUrl: null,
+            selector: null,
+            store: null,
+            url: null
+        }
+    }
 };
