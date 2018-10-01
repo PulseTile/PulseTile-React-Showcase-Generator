@@ -41,7 +41,6 @@ const mainThemeConfigs = {
     'vitals': true,
     'vaccinations': true,
     'topThreeThings': true,
-    'feeds': true,
   },
   patientsSummaryTitles: {
     'diagnoses': 'Problems / Diagnosis',
