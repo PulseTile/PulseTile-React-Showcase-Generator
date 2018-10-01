@@ -10,7 +10,16 @@ If you want to install HelmPHR-version automatically, you should read **"Install
 
 Current version of **Helm-PHR generator** includes following sub-generators:
 1) **Core** sub-generator (_yo showcase:core_);
-2) Plugin **HelmPHR-theme** sub-generator (_yo showcase:plugin-showcase-theme_);
+2) Plugin **Showcase-theme** sub-generator (_yo showcase:plugin-showcase-theme_);
+3) Plugin **TopThreeThings** sub-generator (_yo showcase:plugin-top-three-things_);
+4) Plugin **Vaccinations** sub-generator (_yo showcase:plugin-vaccinations_);
+5) Plugin **Feeds** sub-generator (_yo showcase:plugin-feeds_);
+6) All bronze plugins sub-generator (_yo showcase:plugins-all-bronze_);
+7) All carbon plugins sub-generator (_yo showcase:plugins-all-carbon_);
+8) All silver plugins sub-generator (_yo showcase:plugins-all-silver_);
+9) Plugin **PROMs** sub-generator (_yo showcase:plugin-proms_);
+10) Sub-generator for configuration files updating (_yo showcase:update_);
+11) Sub-generator for theme settings updating (_yo showcase:update-theme-showcase_);
 
 
 # Core
@@ -85,6 +94,8 @@ If you want to remove PROMs plugin you should:
  - remove **plugins/PROMs/** directory; 
  - run command  **_yo helm-phr:update_**
 
+Plugin **PROMs** needs in the plugins **Events, Vitals, Refferals, Procedures**.
+
 
 # Environment
 
@@ -117,15 +128,15 @@ Use Yeoman-generator to create your build automatically:
 ```
     $ yo showcase:core
     $ yo showcase:plugin-showcase-theme
-    $ yo helm-phr:plugin-top-three-things 
-    $ yo helm-phr:plugin-vaccinations 
-    $ yo helm-phr:plugin-feeds 
-    $ yo helm-phr:plugins-all-silver
-    $ yo helm-phr:plugins-all-bronze
-    $ yo helm-phr:plugins-all-carbon
-    $ yo helm-phr:plugin-proms 
-    $ yo helm-phr:update --force
-    $ yo helm-phr:update-theme-showcase
+    $ yo showcase:plugin-top-three-things 
+    $ yo showcase:plugin-vaccinations 
+    $ yo showcase:plugin-feeds 
+    $ yo showcase:plugins-all-silver
+    $ yo showcase:plugins-all-bronze
+    $ yo showcase:plugins-all-carbon
+    $ yo showcase:plugin-proms 
+    $ yo showcase:update --force
+    $ yo showcase:update-theme-showcase
 ```
 
 Attribute **--force** is used for overwriting config files by default.
