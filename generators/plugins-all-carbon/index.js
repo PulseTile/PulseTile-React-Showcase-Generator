@@ -3,15 +3,14 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 const process = require('process');
-const rimraf = require('rimraf');
 
-const functions = require('./functions');
 const commonFunctions = require('../../common/functions');
 
 module.exports = class extends Generator {
+
     prompting() {
         this.log(
-            yosay(`Welcome to the Showcase-theme sub-generator!`)
+            yosay(`Welcome to the all CARBON plugins sub-generator!`)
         );
 
         const prompts = [
@@ -25,27 +24,34 @@ module.exports = class extends Generator {
 
         return this.prompt(prompts).then(props => {
             this.props = props;
-    });
+        });
     }
 
     writing() {
         try {
-
             commonFunctions.goToPluginsDirectory();
-
             commonFunctions.cloneProject(
                 this,
-                'Terms and Conditions plugin',
+                'All Carbon plugins',
                 'master',
-                'https://github.com/PulseTile-Plugins/Plugin-Theme-ShowcaseStack',
-                'Plugin-Theme-Showcase'
+                'https://github.com/BogdanScherban/PulseTile-React-Carbon-Plugins',
+                'All-Carbon-Plugins'
             );
-
             setTimeout(function () {
-                functions.replacePluginFiles();
-                functions.importThemeStyles();
-                commonFunctions.removePluginDirectory('src/components/theme/plugins/Plugin-Theme-Showcase');
+                const excessFiles = [
+                    'LICENSE',
+                    '.git',
+                    'README.md'
+                ];
+                commonFunctions.removeExcessFiles('All-Carbon-Plugins', excessFiles);
             }, 10000);
+            setTimeout(function () {
+                commonFunctions.extractPlugins('plugins/All-Carbon-Plugins/');
+            }, 20000);
+            setTimeout(function () {
+                process.chdir('plugins');
+                commonFunctions.removePluginDirectory('All-Carbon-Plugins');
+            }, 20000);
 
         } catch (err) {
             console.log(yosay(`${chalk.green('ERROR: ')} ${err}`));
@@ -53,3 +59,4 @@ module.exports = class extends Generator {
         }
     }
 };
+
