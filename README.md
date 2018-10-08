@@ -10,7 +10,7 @@ If you want to install HelmPHR-version automatically, you should read **"Install
 
 Current version of **Helm-PHR generator** includes following sub-generators:
 1) **Core** sub-generator (_yo showcase:core_);
-2) Plugin **Showcase-theme** sub-generator (_yo showcase:plugin-showcase-theme_);
+2) Plugin **Showcase-theme** sub-generator (_yo showcase:theme-showcase_);
 3) Plugin **TopThreeThings** sub-generator (_yo showcase:plugin-top-three-things_);
 4) Plugin **Vaccinations** sub-generator (_yo showcase:plugin-vaccinations_);
 5) Plugin **Feeds** sub-generator (_yo showcase:plugin-feeds_);
@@ -18,8 +18,11 @@ Current version of **Helm-PHR generator** includes following sub-generators:
 7) All carbon plugins sub-generator (_yo showcase:plugins-all-carbon_);
 8) All silver plugins sub-generator (_yo showcase:plugins-all-silver_);
 9) Plugin **PROMs** sub-generator (_yo showcase:plugin-proms_);
-10) Sub-generator for configuration files updating (_yo showcase:update_);
-11) Sub-generator for theme settings updating (_yo showcase:update-theme-showcase_);
+10) Feature **UserTour** sub-generator (_yo helm-phr:feature-user-tour_);
+11) Feature **TermsAndConsition** sub-generator (_yo helm-phr:feature-terms-and-conditions_);
+12) Sub-generator for configuration files updating (_yo showcase:update_);
+13) Sub-generator for features files updating (_yo showcase:update-features_);
+14) Sub-generator for theme settings updating (_yo showcase:update-theme-showcase_);
 
 
 # Core
@@ -97,6 +100,17 @@ If you want to remove PROMs plugin you should:
 Plugin **PROMs** needs in the plugins **Events, Vitals, Refferals, Procedures**.
 
 
+# Feature UserTour
+
+This sub-generator clones UserTour feature from GitHub to **components/features/** directory in the project. If any errors occur during generator work you should remove feature directory and repeat generator command.
+
+
+# Feature TermsAndConditions
+
+This sub-generator clones TermsAndConditions feature from GitHub to **components/features/** directory in the project. If any errors occur during generator work you should remove feature directory and repeat generator command.
+
+
+
 # Environment
 
 Before installing the Generator, you will need the following:
@@ -127,7 +141,7 @@ Go to the directory, where you will create your build, for example:
 Use Yeoman-generator to create your build automatically:
 ```
     $ yo showcase:core
-    $ yo showcase:plugin-showcase-theme
+    $ yo showcase:theme-showcase
     $ yo showcase:plugin-top-three-things 
     $ yo showcase:plugin-vaccinations 
     $ yo showcase:plugin-feeds 
@@ -135,7 +149,10 @@ Use Yeoman-generator to create your build automatically:
     $ yo showcase:plugins-all-bronze
     $ yo showcase:plugins-all-carbon
     $ yo showcase:plugin-proms 
+    $ yo helm-phr:feature-user-tour
+    $ yo helm-phr:feature-terms-and-conditions
     $ yo showcase:update --force
+    $ yo showcase:update-features --force
     $ yo showcase:update-theme-showcase
 ```
 
