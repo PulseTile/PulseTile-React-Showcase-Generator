@@ -1,6 +1,8 @@
 const mainThemeConfigs = {
   isLeedsPHRTheme: false,
   topHeader: {
+    showBackButton: true,
+    showHomeButton: false,
     showNotifications: true,
     showQuestions: true,
     showSearch: true,
