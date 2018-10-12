@@ -34,7 +34,7 @@ module.exports = class extends Generator {
                 this,
                 'All Carbon plugins',
                 'master',
-                'https://github.com/BogdanScherban/PulseTile-React-Carbon-Plugins',
+                'https://github.com/PulseTile-Plugins/PulseTile-React-Carbon-Plugins',
                 'All-Carbon-Plugins'
             );
             setTimeout(function () {

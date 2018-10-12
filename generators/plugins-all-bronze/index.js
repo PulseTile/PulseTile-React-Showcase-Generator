@@ -33,7 +33,7 @@ module.exports = class extends Generator {
                 this,
                 'All Bronze plugins',
                 'master',
-                'https://github.com/BogdanScherban/PulseTile-React-Bronze-Plugins',
+                'https://github.com/PulseTile-Plugins/PulseTile-React-Bronze-Plugins',
                 'All-Bronze-Plugins'
             );
             setTimeout(function () {
