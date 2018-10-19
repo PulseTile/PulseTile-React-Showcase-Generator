@@ -17,8 +17,8 @@ Current version of **Helm-PHR generator** includes following sub-generators:
 6) All bronze plugins sub-generator (_yo showcase:plugins-all-bronze_);
 7) All carbon plugins sub-generator (_yo showcase:plugins-all-carbon_);
 8) All silver plugins sub-generator (_yo showcase:plugins-all-silver_);
-10) Feature **UserTour** sub-generator (_yo helm-phr:feature-user-tour_);
-11) Feature **TermsAndConsition** sub-generator (_yo helm-phr:feature-terms-and-conditions_);
+10) Feature **UserTour** sub-generator (_yo showcase:feature-user-tour_);
+11) Feature **TermsAndConsition** sub-generator (_yo showcase:feature-terms-and-conditions_);
 12) Sub-generator for configuration files updating (_yo showcase:update_);
 
 
@@ -131,8 +131,8 @@ Use Yeoman-generator to create your build automatically:
     $ yo showcase:plugins-all-silver
     $ yo showcase:plugins-all-bronze
     $ yo showcase:plugins-all-carbon
-    $ yo helm-phr:feature-user-tour
-    $ yo helm-phr:feature-terms-and-conditions
+    $ yo showcase:feature-user-tour
+    $ yo showcase:feature-terms-and-conditions
     $ yo showcase:update --theme=showcase --force
 ```
 
