@@ -35,7 +35,7 @@ const mainThemeConfigs = {
     'orders': true,
     'personalNotes': true,
     'transfer-of-care': true,
-    'mdt': true,
+    'mdts': true,
     'events': true,
     'procedures': true,
     'referrals': true,
