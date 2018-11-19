@@ -1,110 +1,79 @@
 # General infornation
 
-This generator is used for automatic creation build for Showcase-version. 
+Ripple Foundation has a showcase stack, built from three key components namely, PulseTile, QEWD.js and EtherCIS. Each component is developed independently and therefore has its own development and build process. This Generator takes the PulseTile component (React.js version) and gets it ready for deployment within the showcase stack environment. 
 
-It based on **Yeoman** technology. This tool gives possibility to create new project from modules, which are located in the separate GitHub repositories. More information about Yeoman you can found here: http://yeoman.io/
+This is an exemplar code base for people to learn from and customise for their own use.
 
-If you want to install HelmPHR-version automatically, you should read **"Installing"** below.
+Any version of PulseTile-React project, such as this Showcase version, consists of two main parts: Core framework and Non-Core plugins, including themes (i.e. styles and images).
 
-# Content
+This generator allows us to change / add / remove select plugins and automatically create the PulseTile Showcase build without changing the PulseTile React.js core framework. 
 
-Current version of **Helm-PHR generator** includes following sub-generators:
-1) **Core** sub-generator (_yo showcase:core_);
-2) Theme **Showcase** sub-generator (_yo showcase:theme-showcase_);
-3) Plugin **TopThreeThings** sub-generator (_yo showcase:plugin-top-three-things_);
-4) Plugin **Vaccinations** sub-generator (_yo showcase:plugin-vaccinations_);
-5) Plugin **Feeds** sub-generator (_yo showcase:plugin-feeds_);
-6) All bronze plugins sub-generator (_yo showcase:plugins-all-bronze_);
-7) All carbon plugins sub-generator (_yo showcase:plugins-all-carbon_);
-8) All silver plugins sub-generator (_yo showcase:plugins-all-silver_);
-10) Feature **UserTour** sub-generator (_yo showcase:feature-user-tour_);
-11) Feature **TermsAndConsition** sub-generator (_yo showcase:feature-terms-and-conditions_);
-12) Sub-generator for configuration files updating (_yo showcase:update_);
+For this automatic creation of the build, a generator based on Yeoman technology is used. 
+This tool gives the possibility to create a new project from modules, that are located in the separate GitHub repositories. 
 
+To learn more about Yeoman, please see http://yeoman.io/
 
-# Core
+# The components we have in Showcase Generator
+The current version of Showcase generator includes following sub-generators:
+1)  Core sub-generator;
+2) Non-core plugins sub-generators:
+   * for silver-plugins set;
+   * for bronze plugins set;
+   * for carbon plugins set;
+   * for TopThreeThings plugin;
+   * for Vaccinations plugin;
+   * for Feeds plugin.
+3) Non-core features sub-generators:
+    * for User Tour feature plugin;
+    * for Terms and Conditions feature plugin; 
+4) Theme Showcase sub-generator;  
+5) Sub-generator for configuration files updating.
 
-This sub-generator does the following automatically:
-1) Clone PulseTile-Core version from GitHub;
-2) Install all required Node-modules;
-3) Create the directory for non-core plugins.
- 
-If any errors occur during generator work you should remove project directory and repeat generator command.
+You can see how it works on the scheme below:
+![alt text](https://github.com/PulseTile/PulseTile-React-Showcase-Generator/blob/kuvakina-patch-1/Showcase-gen.png)
 
+# How it works
 
-# Showcase-theme
+We have separate GitHub repositories with Core (all core plugins and features), Non-Core plugins and features, and Theme that are then imported.
 
-This sub-generator does the following automatically:
-1) Clone silver Showcase-theme plugin from GitHub to **plugins/** directory in the project;
-2) Relocate **styles/** directory to **src/**;
-3) Import new styles in **src/config/style.js**.
- 
-If any errors occur during generator work you should remove project directory and repeat generator command.
+When the Showcase version is built, Generator makes following steps automatically:
+1) Clone latest version of Core from GitHub and install all required modules and libraries:    
+_$ yo showcase:core_  
 
+2) Clone Showcase-theme from GitHub and add it into your build:  
+_$ yo showcase:theme-showcase_  
 
-# Silver plugin TopThreeThings
+3) Clone all bronze, silver and carbon plugins from GitHub and add them to Non-Core component storage:   
+_$ yo showcase:plugin-top-three-things_    
+_$ yo showcase:plugin-vaccinations_    
+_$ yo showcase:plugin-feeds_    
+_$ yo showcase:plugins-all-silver_  
+_$ yo showcase:plugins-all-bronze_  
+_$ yo showcase:plugins-all-carbon_   
 
-This sub-generator clones silver TopThreeThings plugin from GitHub to **plugins/** directory in the project;
- 
-If any errors occur during generator work you should remove **plugins/TopThreeThings/** directory and repeat generator command.
+4) Clone other features from GitHub and add it to the Non-Core component storage:   
+_$ yo showcase:feature-user-tour_   
+_$ yo showcase:feature-terms-and-conditions_   
 
-If you want to remove TopThreeThings plugin you should remove **plugins/TopThreeThings/** directory and run command  **_yo helm-phr:update_**
+5) Update the config files which unite Core with Non-Core component storage:  
+_$ yo showcase:update --theme=showcase --force_  
 
+3) Create the build:  
+_$ npm run build_    
 
-# Silver plugin Vaccinations
+After these steps have taken place, the built PulseTile Showcase is ready for use.
 
-This sub-generator clones silver Vaccinations plugin from GitHub to **plugins/** directory in the project;
- 
-If any errors occur during generator work you should remove **plugins/Vaccinations/** directory and repeat generator command.
+**Please see more detailed command line instructions below.** 
 
-If you want to remove Vaccinations plugin you should remove **plugins/Vaccinations/** directory and run command  **_yo helm-phr:update_**
+Before installing the Generator, you will need the following:  
+  * Node.js 6 or higher
+  * npm 3 or higher (which comes bundled with Node)
+  * Git
 
-
-
-# Silver plugin Feeds
-
-This sub-generator clones silver Vaccinations plugin from GitHub to **plugins/** directory in the project;
- 
-If any errors occur during generator work you should remove **plugins/Feeds/** directory and repeat generator command.
-
-
-# All silver plugins
-
-This sub-generator clone all silver plugins from GitHub-repository.
-
-
-# All bronze plugins
-
-This sub-generator clone all bronze plugins from GitHub-repository.
-
-
-# All carbon plugins
-
-This sub-generator clone all carbon plugins from GitHub-repository.
-
-
-# Feature UserTour
-
-This sub-generator clones UserTour feature from GitHub to **components/features/** directory in the project. If any errors occur during generator work you should remove feature directory and repeat generator command.
-
-
-# Feature TermsAndConditions
-
-This sub-generator clones TermsAndConditions feature from GitHub to **components/features/** directory in the project. If any errors occur during generator work you should remove feature directory and repeat generator command.
-
-
-
-# Environment
-
-Before installing the Generator, you will need the following:
-- Node.js 6 or higher
-- npm 3 or higher (which comes bundled with Node)
-- Git
-
-You can check current version by:
+You can check current version by:  
 ```
-    $ node --version
-    $ npm --version
+    $ node --version  
+    $ npm --version   
     $ git --version
 ```
 
