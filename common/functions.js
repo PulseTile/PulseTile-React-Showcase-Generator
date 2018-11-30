@@ -10,6 +10,7 @@ const pluginsInfo = require('./plugins/pluginsInfo');
 const recordsOfTableInfo = require('./plugins/recordsOfTable/pluginsInfo');
 const extraPluginsInfo = require('./components/extraPluginsInfo');
 const topHeaderButtonsInfo = require('./components/topHeaderButtonsInfo');
+const pagesInfo = require('./pages/pagesInfo');
 
 /**
  * This module includes common functions, or functions which can be used in different subgenerators
@@ -30,8 +31,17 @@ module.exports = {
    * This function redirects generator to the theme features storage directory
    */
   goToFeaturesDirectory: function() {
-    const themeDirectoryPath = 'PulseTile-React-Core/src/components/theme/components/features';
-    process.chdir(themeDirectoryPath);
+    const featuresDirectoryPath = 'PulseTile-React-Core/src/components/theme/components/features';
+    process.chdir(featuresDirectoryPath);
+    return true;
+  },
+
+  /**
+   * This function redirects generator to the theme pages storage directory
+   */
+  goToPagesDirectory: function() {
+    const pagesDirectoryPath = 'PulseTile-React-Core/src/components/theme/pages';
+    process.chdir(pagesDirectoryPath);
     return true;
   },
 
@@ -81,17 +91,33 @@ module.exports = {
   },
 
   /**
-   * This function checks content of features directory and returns features list
+   * This function checks content of non-core features directory and returns their list
    *
+   * @param {string} dirName
    * @return {array}
    */
   getFeaturesInformation: function(dirName = null) {
     const featuresList = [];
-    let dir = dirName ? dirName : process.cwd();
+    var dir = dirName ? dirName : process.cwd();
     fs.readdirSync(dir).forEach(function(file) {
       featuresList.push(file);
     });
     return featuresList;
+  },
+
+  /**
+   * This function checks content of non-core pages directory and returns their list
+   *
+   * @param {string} dirName
+   * @return {Array}
+   */
+  getPagesInformation: function(dirName = null) {
+    const pagesList = [];
+    var dir = dirName ? dirName : process.cwd();
+    fs.readdirSync(dir).forEach(function(file) {
+      pagesList.push(file);
+    });
+    return pagesList;
   },
 
   /**
@@ -272,4 +298,31 @@ module.exports = {
 
     return true;
   },
+
+  /**
+   * This function updates config files for non-core pages
+   *
+   * @return {boolean}
+   */
+  updateNonCorePages: function (el) {
+    console.log(yosay(`${chalk.yellow('Step 6:')} Non-core pages files updating...`));
+
+    const srcPath = '../pages';
+    process.chdir(srcPath);
+    const pagesList = this.getPagesInformation();
+
+    var pagesInfoArray = [];
+    pagesList.forEach(function(item) {
+        pagesInfoArray.push(pagesInfo[item]);
+    });
+
+    const configDirectoryPath = '../config';
+    process.chdir(configDirectoryPath);
+
+    el.fs.copyTpl(el.templatePath('pages/nonCorePagesUrls.txt'), 'nonCorePagesUrls.js', {
+        pages: pagesInfoArray
+    });
+
+    return true;
+  }
 };

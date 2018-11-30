@@ -20,47 +20,39 @@ module.exports = class extends Generator {
     variable = test;
   }
 
-    prompting() {
-        this.log(
-            yosay(`Welcome to the Config files updating!!!`)
-        );
+  prompting() {
+    this.log(
+      yosay(`Welcome to the Config files updating!!!`)
+    );
+    const prompts = [
+      {
+        type: 'confirm',
+        name: 'someAnswer',
+        message: 'Do you want to update config files?',
+        default: true
+      }
+    ];
+    return this.prompt(prompts).then(props => {
+      this.props = props;
+    });
+  }
 
-        const prompts = [
-            {
-                type: 'confirm',
-                name: 'someAnswer',
-                message: 'Do you want to update config files?',
-                default: true
-            }
-        ];
-
-        return this.prompt(prompts).then(props => {
-            this.props = props;
-        });
+  writing() {
+    try {
+      commonFunctions.goToPluginsDirectory();
+      commonFunctions.updateConfigFiles(this, 2);
+      commonFunctions.updateRecordsOfTable(this, 3);
+      commonFunctions.goToComponentsDirectory();
+      commonFunctions.updateFeaturesConfigFiles(this);
+      commonFunctions.updateNonCorePages(this);
+      fs.copyFileSync(
+        this.templatePath('theme/' + variable + '.txt'),
+        '../../../themes.config.js'
+      );
+    } catch (err) {
+      console.log(yosay(`${chalk.green('ERROR: ')} ${err}`));
+      console.error(`ERROR: ${err}`);
     }
-
-    writing() {
-        try {
-            console.log(variable);
-            commonFunctions.goToPluginsDirectory();
-            commonFunctions.updateConfigFiles(this, 2);
-            commonFunctions.updateRecordsOfTable(this, 3);
-            commonFunctions.goToComponentsDirectory();
-            commonFunctions.updateFeaturesConfigFiles(this);
-
-
-
-                fs.copyFileSync(
-                    this.templatePath('theme/' + variable + '.txt'),
-                    '../../../themes.config.js'
-                );
-
-
-
-        } catch (err) {
-            console.log(yosay(`${chalk.green('ERROR: ')} ${err}`));
-            console.error(`ERROR: ${err}`);
-        }
-    }
+  }
 };
 

@@ -39,7 +39,7 @@ module.exports = class extends Generator {
       commonFunctions.cloneProject(
         this,
         'PulseTile-Core',
-        'develop',
+        'master',
         'https://github.com/PulseTile/PulseTile-React-Core',
         'PulseTile-React-Core'
       );
@@ -47,6 +47,7 @@ module.exports = class extends Generator {
       functions.updateNpmModules(this);
       functions.createPluginsDirectory();
       functions.createFeaturesDirectory();
+      functions.createPagesDirectory();
 
       console.log(yosay(`Congradulations!!! ${chalk.green('PulseTile-Core')} was installed successfully!!!`));
 

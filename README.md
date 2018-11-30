@@ -26,11 +26,13 @@ The current version of Showcase generator includes following sub-generators:
 3) Non-core features sub-generators:
     * for User Tour feature plugin;
     * for Terms and Conditions feature plugin; 
-4) Theme Showcase sub-generator;  
-5) Sub-generator for configuration files updating.
+4) Non-core pages sub-generators:
+    * for UI-kit page;
+5) Theme Showcase sub-generator;  
+6) Sub-generator for configuration files updating.
 
 You can see how it works on the scheme below:
-![alt text](https://github.com/PulseTile/PulseTile-React-Showcase-Generator/blob/kuvakina-patch-1/Showcase-gen.png)
+![alt text](https://github.com/PulseTile/PulseTile-React-Showcase-Generator/blob/master/Showcase-gen.png)
 
 # How it works
 
@@ -51,14 +53,17 @@ _$ yo showcase:plugins-all-silver_
 _$ yo showcase:plugins-all-bronze_  
 _$ yo showcase:plugins-all-carbon_   
 
-4) Clone other features from GitHub and add it to the Non-Core component storage:   
+4) Clone features from GitHub and add it to the Non-Core component storage:   
 _$ yo showcase:feature-user-tour_   
 _$ yo showcase:feature-terms-and-conditions_   
 
-5) Update the config files which unite Core with Non-Core component storage:  
+5) Clone pages from GitHub and add it to the Non-Core component storage:   
+_$ yo showcase:page-uikit_ 
+
+6) Update the config files which unite Core with Non-Core component storage:  
 _$ yo showcase:update --theme=showcase --force_  
 
-3) Create the build:  
+7) Create the build:  
 _$ npm run build_    
 
 After these steps have taken place, the built PulseTile Showcase is ready for use.
@@ -102,6 +107,7 @@ Use Yeoman-generator to create your build automatically:
     $ yo showcase:plugins-all-carbon
     $ yo showcase:feature-user-tour
     $ yo showcase:feature-terms-and-conditions
+    $ yo showcase:page-uikit
     $ yo showcase:update --theme=showcase --force
 ```
 

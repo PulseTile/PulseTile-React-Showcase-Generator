@@ -4,6 +4,7 @@ const process = require('process');
 const mkdirp = require('mkdirp');
 
 module.exports = {
+
   /**
    * This function updates Node modules of Core
    *
@@ -18,7 +19,7 @@ module.exports = {
   },
 
   /**
-   * This function creates directory for plugins
+   * This function creates directory for non-core plugins
    *
    * @return {boolean}
    */
@@ -29,13 +30,24 @@ module.exports = {
   },
 
   /**
-   * This function creates directory for plugins
+   * This function creates directory for non-core features
    *
    * @return {boolean}
    */
   createFeaturesDirectory: function () {
-    const themeDirectoryPath = 'src/components/theme/components/features';
-    mkdirp(themeDirectoryPath);
+    const featuresDirectoryPath = 'src/components/theme/components/features';
+    mkdirp(featuresDirectoryPath);
+    return true;
+  },
+
+  /**
+   * This function creates directory for non-core pages
+   *
+   * @return {boolean}
+   */
+  createPagesDirectory: function () {
+    const pagesDirectoryPath = 'src/components/theme/pages';
+    mkdirp(pagesDirectoryPath);
     return true;
   }
 };
