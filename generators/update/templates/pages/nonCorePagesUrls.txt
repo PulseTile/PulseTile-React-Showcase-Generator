@@ -1,0 +1,13 @@
+<% for (i = 0; i < pages.length; i++) { %><% item = pages[i] %>
+import <%= item.component %> from '<%= item.path %>';
+<% } %>
+
+/**
+ * This is array of NonCore pages
+ * (empty for Core)
+ */
+export const nonCorePagesUrls = [
+<% for (i = 0; i < pages.length; i++) { %><% item = pages[i] %>
+    { pathname: '<%= item.url %>', component: <%= item.component %> }
+<% } %>
+];
